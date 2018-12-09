@@ -1,21 +1,22 @@
-DROP TABLE products
-DROP TABLE manufacturer
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS manufacturers;
 
 
 CREATE TABLE products (
-    id SERIAL
-    name VARCHAR
-    description VARCHAR
-    stock_count INT
-    cost INT
-    sell_price INT
-)
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    description VARCHAR,
+    quantity INT,
+    cost INT,
+    sell_price INT,
+    size INT,
+    sport_type VARCHAR,
+    manu_id INT REFERENCES manufacturers(id)
+);
 
 CREATE TABLE manufacturers (
-    id SERIAL
-    name VARCHAR
-    address VARCHAR
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    phone VARCHAR,
     country VARCHAR
-    sport_type VARCHAR
-
-)
+);

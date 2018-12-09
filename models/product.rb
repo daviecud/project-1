@@ -3,7 +3,8 @@ require_relative('./manufacturer.rb')
 
 class Product
 
-  attr_accessor :name, :description, :quantity, :cost, :sell_price
+  attr_accessor :name, :description, :quantity, :cost, :sell_price,
+  :size, :sport_type, :manu_id
   attr_reader :id
 
   def initialize(options)
@@ -12,8 +13,14 @@ class Product
     @quantity = options['quantity'].to_i
     @cost = options['cost'].to_i
     @sell_price = options['sell_price'].to_i
-    @manufacturer_id = options['manufacturer_id'].to_i
+    @size = options['size'].to_i
+    @sport_type = options['sport_type']
+    @manu_id = options['manu_id'].to_i
     @id = options['id'].to_i if options['id']
+  end
+
+  def product_name()
+    return "#{@name}"
   end
 
   def save()
@@ -23,16 +30,17 @@ class Product
       quantity,
       cost,
       sell_price,
-      manufacturer_id,
       size,
-      sport_type
+      sport_type,
+      manu_id
     ) VALUES (
       $1, $2, $3, $4, $5, $6, $7, $8
-    ) RETURNING *"
-    values = [@name, @description, @quantity, @cost, @sell_price, @manufacturer_id,
-              @size, @sport_type]
-    product_data = SqlRunner.run(sql, values)
-    @id = product_data.first()['id'].to_i
+    )
+    RETURNING *"
+    values = [@name, @description, @quantity, @cost, @sell_price,
+              @size, @sport_type, @manu_id]
+    product_data = SqlRunner.run(sql, values).first
+    @id = product_data['id'].to_i
   end
 
   def update()
@@ -42,14 +50,14 @@ class Product
       quantity,
       cost,
       sell_price,
-      manufacturer_id,
       size,
-      sport_type
+      sport_type,
+      manu_id
     ) = (
       $1, $2, $3, $4, $5, $6, $7, $8
       ) WHERE id = $9"
-      values = [@name, @description, @quantity, @cost, @sell_price, @manufacturer_id,
-                @size, @sport_type, @id]
+      values = [@name, @description, @quantity, @cost, @sell_price,
+                @size, @sport_type, @manu_id, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -59,6 +67,11 @@ class Product
     SqlRunner.run(sql, values)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM products"
+    SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM products"
     product = SqlRunner.run(sql)
@@ -66,12 +79,33 @@ class Product
     return result
   end
 
-  def self.find()
+  def self.find(id)
     sql = "SELECT * FROM products WHERE id = $1"
     values = [id]
-    product = SqlRunner.run(sql, values)
-    result = Product.new(product.first)
-    return result
+    product = SqlRunner.run(sql, values)[0]
+    return Product.new(product)
+
+  end
+
+  def manufacturer()
+    sql = "SELECT * FROM manufacturers WHERE id = $1"
+    values = [@manu_id]
+    manufacturers = SqlRunner.run(sql, values)[0]
+    return Manufacturer.new(manufacturers)
+  end
+
+  def mark_up()
+    markup = (@sell_price -= @cost)
+    return markup
+  end
+
+  def stock_level()
+    level = @quantity
+    if level <= 1
+      return "Low Stock"
+    elsif level == 0
+      return "Out of Stock"
+    end
   end
 
 end
