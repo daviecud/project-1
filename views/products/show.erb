@@ -1,0 +1,19 @@
+<div class="container" id="show-container">
+
+  <h1><%= @product.name %></h1>
+  <div class="row">
+    <div class="product-info">
+
+      <h3>Description: <%= @product.description %></h3>
+      <h3>Quantity: <%= @product.quantity %></h3>
+      <h3>Cost: <%= @product.cost %></h3>
+      <h3>Sell Price: <%= @product.sell_price %></h3>
+      <h3>Size: <%= @product.size %></h3>
+      <h3>Sport Type: <<%= @product.sport_type %></h3>
+      <a class="button" href="/products/<%= @product.id %>/edit">Edit</a>
+      <form action="/products/<%= @product.id %>/delete" method="POST">
+        <input type="submit" name="" value="Delete">
+      </form>
+    </div>
+  </div>
+</div>

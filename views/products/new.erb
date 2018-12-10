@@ -1,0 +1,34 @@
+<div class="container" id="create-container">
+
+  <h1>Add a Product</h1>
+  <hr />
+
+
+<form action="/products" method="post">
+  <label for="name">Name</label>
+  <input type="text" name="name">
+  <label for="description">Description</label>
+  <input type="text" name="description">
+  <label for="quantity">Quantity</label>
+  <input type="number" name="quantity">
+  <label for="cost">Cost</label>
+  <input type="number" name="cost">
+  <label for="sell_price">Sell Price</label>
+  <input type="number" name="sell_price">
+  <label for="size">Size</label>
+  <input type="number" name="size">
+  <label for="sport_type">Sport Type</label>
+  <input type="text" name="sport_type">
+
+  <select name="manufacturer_id">
+    <%= for manufacturer in @manufacturers %>
+    <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+    <% end %>
+  </select>
+
+
+
+  <input type="submit" value="Save">
+</form>
+
+</div>

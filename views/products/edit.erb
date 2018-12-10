@@ -1,0 +1,27 @@
+<div class="container" id="edit-container">
+
+  <h1>Edit <%= @product.name %></h1>
+  <hr />
+
+  <form action="/products/<%= @product.id %>" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%= @product.id %>">
+    <label for="description">Description</label>
+    <input type="text" name="description" value="<%= @product.description %>">
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" value="<%= @product.quantity %>">
+    <label for="cost">Cost</label>
+    <input type="number" name="cost" value="<%= @product.cost %>">
+    <label for="sell_price">Sell Price</label>
+    <input type="number" name="sell_price" value="<%= @product.sell_price %>">
+    <label for="size">Size</label>
+    <input type="number" name="size" value="<%= @product.size %>">
+    <label for="sport_type">Sport Type</label>
+    <input type="text" name="sport_type" value="<%= @product.sport_type %>">
+    <input type="submit" value="Save">
+  </form>
+
+
+    
+
+</div>

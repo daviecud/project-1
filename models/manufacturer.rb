@@ -22,7 +22,7 @@ def save()
   ) VALUES (
     $1, $2, $3
   )
-  RETURNING id"
+  RETURNING *"
   values = [@name, @phone, @country]
   manufacturer_data = SqlRunner.run(sql, values)
   @id = manufacturer_data[0]["id"]
@@ -65,11 +65,11 @@ def self.all()
   return result
 end
 
-def product()
-  sql = "SELECT * FROM products WHERE manu_id = $1"
+def products()
+  sql = "SELECT * FROM products WHERE id = $1"
   values = [@id]
   products = SqlRunner.run(sql, values)
-  return products.new{|product| Product.new(product)}
+  return products.map {|product| Product.new(product)}
 end
 
 end

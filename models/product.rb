@@ -4,8 +4,8 @@ require_relative('./manufacturer.rb')
 class Product
 
   attr_accessor :name, :description, :quantity, :cost, :sell_price,
-  :size, :sport_type, :manu_id
-  attr_reader :id
+                :size, :sport_type
+  attr_reader   :id
 
   def initialize(options)
     @name = options['name']
@@ -15,7 +15,7 @@ class Product
     @sell_price = options['sell_price'].to_i
     @size = options['size'].to_i
     @sport_type = options['sport_type']
-    @manu_id = options['manu_id'].to_i
+    # @manu_id = options['manu_id'].to_i()
     @id = options['id'].to_i if options['id']
   end
 
@@ -31,16 +31,15 @@ class Product
       cost,
       sell_price,
       size,
-      sport_type,
-      manu_id
+      sport_type
     ) VALUES (
-      $1, $2, $3, $4, $5, $6, $7, $8
+      $1, $2, $3, $4, $5, $6, $7
     )
     RETURNING *"
     values = [@name, @description, @quantity, @cost, @sell_price,
-              @size, @sport_type, @manu_id]
-    product_data = SqlRunner.run(sql, values).first
-    @id = product_data['id'].to_i
+              @size, @sport_type]
+    product_data = SqlRunner.run(sql, values)
+    @id = product_data[0]['id']
   end
 
   def update()
@@ -51,13 +50,13 @@ class Product
       cost,
       sell_price,
       size,
-      sport_type,
-      manu_id
+      sport_type
+
     ) = (
-      $1, $2, $3, $4, $5, $6, $7, $8
-      ) WHERE id = $9"
+      $1, $2, $3, $4, $5, $6, $7
+      ) WHERE id = $8"
       values = [@name, @description, @quantity, @cost, @sell_price,
-                @size, @sport_type, @manu_id, @id]
+                @size, @sport_type,  @id]
     SqlRunner.run(sql, values)
   end
 
@@ -89,7 +88,7 @@ class Product
 
   def manufacturer()
     sql = "SELECT * FROM manufacturers WHERE id = $1"
-    values = [@manu_id]
+    values = [@id]
     manufacturers = SqlRunner.run(sql, values)[0]
     return Manufacturer.new(manufacturers)
   end

@@ -10,8 +10,8 @@ CREATE TABLE products (
     cost INT,
     sell_price INT,
     size INT,
-    sport_type VARCHAR,
-    manu_id INT REFERENCES manufacturers(id)
+    sport_type VARCHAR
+
 );
 
 CREATE TABLE manufacturers (

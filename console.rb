@@ -13,8 +13,7 @@ product1 = Product.new({
   "cost" => "180",
   "sell_price" => "250",
   "size" => "180",
-  "sport_type" => "Snowboarding",
-  "manu_id" => 'manufacturer1.id'
+  "sport_type" => "Snowboarding"
   })
 
   product2 = Product.new({
@@ -24,8 +23,8 @@ product1 = Product.new({
     "cost" => "210",
     "sell_price" => "300",
     "size" => "160",
-    "sport_type" => "Skiing",
-    "manu_id" => 'manufacturer3.id'
+    "sport_type" => "Skiing"
+
     })
 
     product3 = Product.new({
@@ -35,8 +34,8 @@ product1 = Product.new({
       "cost" => "200",
       "sell_price" => "320",
       "size" => "42",
-      "sport_type" => "Winter Sports",
-      "manu_id" => 'manufacturer2.id'
+      "sport_type" => "Winter Sports"
+
       })
 
       product1.save()

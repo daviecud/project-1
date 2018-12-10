@@ -1,0 +1,19 @@
+<div class="container">
+
+  <h1><%= @manufacturer.name %></h1>
+
+  <h2 class="row">Products</h2>
+  <div class="product">
+    <% for product in @products %>
+    <div class="product-info">
+
+
+    <p>Name: <a class="name" href="/products/<%= product.id %>"> <%= product.name %></a></p>
+    <p>Manufacturer: <%= product.manufacturer.name %></p>
+
+    <hr />
+  </div>
+  <% end %>
+
+  </div>
+</div>

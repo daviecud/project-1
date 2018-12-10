@@ -1,0 +1,22 @@
+<h1>All the inventory in Products</h1>
+
+<hr />
+<div class="row">
+  <p>click on a product name for details</p>
+
+</div>
+
+<div class="product">
+
+  <%= for product in @products %>
+  <div class="product-info">
+
+    <p>Name: <a class="name" href="/products/"></a> </p>
+    <p>manufacturer: <%= product.manufacturer.name %></p>
+
+    <hr />
+
+  </div>
+  <% end %>
+
+</div>
