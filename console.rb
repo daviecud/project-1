@@ -38,9 +38,20 @@ product1 = Product.new({
 
       })
 
+    product4 = Product.new({
+      "name" => "DC Free Soul Snowboard",
+      "description" => "The boldest on the slopes",
+      "quantity" => "1",
+      "cost" => "175",
+      "sell_price" => "2000",
+      "size" => "160",
+      "sport_type" => "Snowboarding"
+      })
+
       product1.save()
       product2.save()
       product3.save()
+      product4.save()
 
       manufacturer1 = Manufacturer.new({
         "name" => "Burton",

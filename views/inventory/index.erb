@@ -1,0 +1,19 @@
+<h2>All the inventory!</h2>
+
+<% for product in @products %>
+  <p>Name: <%= product.product_name() %></p>
+  <p>Description: <%= product.description %></p>
+  <p>Quantity: <%= product.quantity %></p>
+  <p>Cost: <%= product.cost %></p>
+  <p>Sell Price: <%= product.sell_price %></p>
+  <p>Size: <%= product.size %></p>
+  <p>Sport Type: <%= product.sport_type %></p>
+  <p>Mark-up: <%= product.mark_up() %></p>
+  <p>Stock Warning: <%= product.stock_level() %></p>
+  <p> <a href="/inventory/<%= product.id %>">Show Product</a> </p>
+<hr />
+<% end %>
+
+<div class="">
+
+</div>

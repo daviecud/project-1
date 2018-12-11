@@ -74,7 +74,7 @@ class Product
   def self.all()
     sql = "SELECT * FROM products"
     product = SqlRunner.run(sql)
-    result = products.map { |product| Product.new(product)}
+    result = product.map { |product| Product.new(product)}
     return result
   end
 

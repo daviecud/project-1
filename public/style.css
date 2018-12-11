@@ -1,0 +1,155 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: blue;
+}
+
+nav {
+  background-color: yellow;
+}
+
+.container (
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  )
+
+#home-container {
+  background-image: url(/images/burton-deja-vu-snowboard.jpg);
+  background-size: cover;
+}
+
+#create-container {
+  background-image: url(/images/north-face-snow-quest-jacket-orange.jpg);
+  background-size: cover;
+}
+
+#edit-container {
+  background-image: url(/images/rossignol skis.jpg);
+  background-size: cover;
+}
+
+#show-container {
+  background-image: url(/images/salomon skis.jpg);
+  background-size: cover;
+}
+
+h1 {
+  color: orange;
+  margin: 0;
+  font-variant: small-caps;
+  font-size: 100px;
+  text-align: center;
+  /* font-family: fantasy; */
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  color: green;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 17px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.topnav a:hover {
+  background-color: red;
+  color: yellow;
+}
+
+.product {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-info {
+  width: 500px
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: red;
+  margin: 10px;
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 70px;
+  text-align: center;
+}
+
+input[type=submit] {
+  margin: 10px;
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 70px;
+  height: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  color: gold;
+}
+
+a.name {
+  color: green;
+  text-decoration: none;
+}
+
+a.name:visited {
+  color: silver;
+}
+
+select {
+  color: black;
+  width: 50px;
+  height: 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: gold;
+  margin: 10px;
+  text-align-last: center;
+}
+
+input[type=text], input[type=number] {
+  background-color: pink;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  height: 15px;
+  border-bottom: 2px solid blue;
+  width: 40%;
+  margin: 10px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30%;
+  align-items: center;
+}
