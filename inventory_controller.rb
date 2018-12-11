@@ -17,16 +17,10 @@ get '/inventory' do
 end
 
 get '/inventory/new' do
-
+  erb(:"inventory/new")
 end
 
-get '/inventory/products' do
-  erb(:"inventory/show")
-end
-
-
-
-post 'inventory' do
+post '/inventory' do
   Product.new(params).save
   redirect to '/inventory'
 end
@@ -35,3 +29,8 @@ get '/inventory/:id' do
   @products = Product.find(params['id'])
   erb(:"inventory/show")
 end
+
+# get 'inventory/manufacturers' do
+#   @manufacturer = Manufacturer.all()
+#   erb('inventory/manu')
+# end

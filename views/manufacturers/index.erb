@@ -1,20 +1,10 @@
 <h1>All Manufacturers</h1>
 
+
+<% for manufacturer in @manufacturer %>
+  <p>Name: <%= manufacturer.name %></p>
+  <p>Phone: <%= manufacturer.phone %></p>
+  <p>Country: <%= manufacturer.country %></p>
+  <p> <a href="/manufacturers/<%= manufacturer.id %>">Show Product</a> </p>
 <hr />
-<div class="row">
-  <p>(Click on a manufacturer for details)</p>
-</div>
-
-<div class="product">
-
-  <%= for manufacturer in @manufacturers %>
-  <div class="product-info" id="<%= manufacturer.name %>">
-    <a class="name" href="/manufacturers/<%= manufacturer.id %>">
-    </a>
-
-    <hr />
-  </div>
-
-  <% end %>
-
-</div>
+<% end %>

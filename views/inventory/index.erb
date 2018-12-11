@@ -1,5 +1,14 @@
 <h2>All the inventory!</h2>
 
+<div class="dropdown">
+  <button type="button" class="dropbtn" name="button">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input id="myInput" type="text" placeholder="Please select.." onkeyup="">
+    <a href="#"></a>
+  </div>
+</div>
+
+
 <% for product in @products %>
   <p>Name: <%= product.product_name() %></p>
   <p>Description: <%= product.description %></p>
