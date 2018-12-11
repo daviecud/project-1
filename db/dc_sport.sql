@@ -10,7 +10,8 @@ CREATE TABLE products (
     cost INT,
     sell_price INT,
     size INT,
-    sport_type VARCHAR
+    sport_type VARCHAR,
+    manufacturer VARCHAR
 
 );
 

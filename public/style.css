@@ -1,11 +1,34 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: blue;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
 }
 
 nav {
   background-color: yellow;
+}
+
+.midcontainer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  text-align: center;
+  border-radius: 15px;
+  border-color: #158CC0;
+  border-style: outset;
+}
+
+#inventorytable {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  text-align: center;
+  border-radius: 15px;
+  border-color: #158CC0;
+  border-style: outset;
 }
 
 .container (
@@ -35,27 +58,36 @@ nav {
 }
 
 h1 {
-  color: orange;
+  color: #158CC0;
   margin: 0;
   font-variant: small-caps;
-  font-size: 100px;
+  font-size: 80px;
   text-align: center;
-  /* font-family: fantasy; */
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 20px;
 }
 
-h2, h3 {
+h2 {color: #158CC0; text-align: center;}
+
+h3 {
   color: green;
 }
 
 .topnav {
-  background-color: #333;
+  background-color: #158CC0;
   overflow: hidden;
+  height: 45px;
+  width: 100%;
+  padding-top: 10px;
+  color: #ffffff;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
   padding: 15px 17px;
   text-decoration: none;
@@ -90,7 +122,7 @@ h2, h3 {
   cursor: pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  width: 70px;
+  width: 90px;
   text-align: center;
 }
 
@@ -150,7 +182,7 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 30%;
+  width: 80%;
   align-items: center;
 }
 
@@ -159,7 +191,7 @@ form {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  height: 500px;
+  height: 400px;
   width: 100%;
   background: url(/images/dc_snow.jpg);
   background-repeat: no-repeat;
@@ -179,6 +211,7 @@ form {
   opacity: 0.7;
   letter-spacing: 15px;
   text-shadow: 5px 10px #000000;
+
 }
 
 .pagefooter {

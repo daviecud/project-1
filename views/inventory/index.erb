@@ -1,28 +1,71 @@
-<h2>All the inventory!</h2>
+<h2>PRODUCTS INVENTORY</h2>
 
-<div class="dropdown">
-  <button type="button" class="dropbtn" name="button">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input id="myInput" type="text" placeholder="Please select.." onkeyup="">
-    <a href="#"></a>
-  </div>
+
+<div id="inventorytable">
+  <table>
+    <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Description</th>
+    <th></th>
+    <th>Quantity</th>
+    <th></th>
+    <th>Cost(£)</th>
+    <th></th>
+    <th>Sell Price(£)</th>
+    <th></th>
+    <th>Size(cm)</th>
+    <th></th>
+    <th>Sport Type</th>
+    <th></th>
+    <th>Mark-up(£)</th>
+    <th></th>
+    <th>Stock Level</th>
+
+    </tr>
+
+    <% for product in @products %>
+    <tr>
+      <td> <a href="/inventory/<%= product.id %>"><%= product.name %></a> </td>
+      <td>|</td>
+      <td><%= product.description %></td>
+      <td>|</td>
+      <td><%= product.quantity %></td>
+      <td>|</td>
+      <td><%= product.cost %></td>
+      <td>|</td>
+      <td><%= product.sell_price %></td>
+      <td>|</td>
+      <td><%= product.size %></td>
+      <td>|</td>
+      <td><%= product.sport_type %></td>
+      <td>|</td>
+      <td><%= product.mark_up %></td>
+      <td>|</td>
+      <td><%= product.stock_level %></td>
+    </tr>
+
+    <% end %>
+
+  </table>
 </div>
 
+<div class="midcontainer">
 
 <% for product in @products %>
   <p>Name: <%= product.product_name() %></p>
   <p>Description: <%= product.description %></p>
   <p>Quantity: <%= product.quantity %></p>
-  <p>Cost: <%= product.cost %></p>
-  <p>Sell Price: <%= product.sell_price %></p>
-  <p>Size: <%= product.size %></p>
+  <p>Cost(£): <%= product.cost %></p>
+  <p>Sell Price(£): <%= product.sell_price %></p>
+  <p>Size(cm): <%= product.size %></p>
   <p>Sport Type: <%= product.sport_type %></p>
-  <p>Mark-up: <%= product.mark_up() %></p>
+  <p>Mark-up(£): <%= product.mark_up() %></p>
   <p>Stock Warning: <%= product.stock_level() %></p>
   <p> <a href="/inventory/<%= product.id %>">Show Product</a> </p>
 <hr />
 <% end %>
 
-<div class="">
+
 
 </div>
