@@ -13,6 +13,10 @@ def initialize(options)
   @country = options['country']
 end
 
+def manufacturer_name()
+  return "#{@name}"
+end
+
 def save()
   sql = "INSERT INTO manufacturers (
     name,

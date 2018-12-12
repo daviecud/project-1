@@ -1,10 +1,14 @@
 <h1>All Manufacturers</h1>
 
+<div class="midcontainer">
+
 
 <% for manufacturer in @manufacturer %>
-  <p>Name: <%= manufacturer.name %></p>
+  <p>Name: <%= manufacturer.manufacturer_name() %></p>
   <p>Phone: <%= manufacturer.phone %></p>
   <p>Country: <%= manufacturer.country %></p>
-  <p> <a href="/manufacturers/<%= manufacturer.id %>">Show Product</a> </p>
+  <p> <a href="/manufacturers/<%= manufacturer.id %>">Show Manufacturer</a> </p>
 <hr />
 <% end %>
+
+</div>

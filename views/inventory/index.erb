@@ -1,4 +1,4 @@
-<h2>PRODUCTS INVENTORY</h2>
+<h1>Products Inventory</h1>
 
 
 <div id="inventorytable">
@@ -14,14 +14,15 @@
     <th></th>
     <th>Sell Price(£)</th>
     <th></th>
+    <th>Mark-up(£)</th>
+    <th></th>
     <th>Size(cm)</th>
     <th></th>
     <th>Sport Type</th>
     <th></th>
-    <th>Mark-up(£)</th>
-    <th></th>
     <th>Stock Level</th>
-
+    <th></th>
+    <th>Product</th>
     </tr>
 
     <% for product in @products %>
@@ -36,13 +37,15 @@
       <td>|</td>
       <td><%= product.sell_price %></td>
       <td>|</td>
+      <td><%= product.mark_up %></td>
+      <td>|</td>
       <td><%= product.size %></td>
       <td>|</td>
       <td><%= product.sport_type %></td>
       <td>|</td>
-      <td><%= product.mark_up %></td>
-      <td>|</td>
       <td><%= product.stock_level %></td>
+      <td>|</td>
+      <td><a href="/inventory/<%= product.id %>">Show Product</a></td>
     </tr>
 
     <% end %>
@@ -58,10 +61,10 @@
   <p>Quantity: <%= product.quantity %></p>
   <p>Cost(£): <%= product.cost %></p>
   <p>Sell Price(£): <%= product.sell_price %></p>
+  <p>Mark-up(£): <%= product.mark_up() %></p>
   <p>Size(cm): <%= product.size %></p>
   <p>Sport Type: <%= product.sport_type %></p>
-  <p>Mark-up(£): <%= product.mark_up() %></p>
-  <p>Stock Warning: <%= product.stock_level() %></p>
+  <p style="color: red;" >Stock Warning: <%= product.stock_level() %></p>
   <p> <a href="/inventory/<%= product.id %>">Show Product</a> </p>
 <hr />
 <% end %>

@@ -1,3 +1,9 @@
+<h1>Please Update Product Details</h1>
+
+<div class="midcontainer">
+
+
+
 <form action="/inventory/<%= @products.id %>" method="post">
     <label for="name">Name:</label>
     <input id="name" type="text" name="name" value="<%= @products.name %>" />
@@ -13,9 +19,9 @@
     <input id="size" type="number" name="size" value="<%= @products.size %>" />
     <label for="sport_type">Sport Type:</label>
     <input id="sport_type" type="text" name="sport_type" value="<%= @products.sport_type %>" />
-    <label for="manufacturer">manufacturer:</label>
-    <input id="manufacturer" type="text" name="manufacturer" value="<%= @products.manufacturer %>" />
 
     <input type="submit" name="" value="Edit Order">
 
 </form>
+
+</div>

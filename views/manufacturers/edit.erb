@@ -1,0 +1,17 @@
+<h1>Please Update Manufacturer Details</h1>
+
+<div class="midcontainer">
+
+<form action="/manufacturers/<%= @manufacturer.id %>" method="post">
+    <label for="name">Name:</label>
+    <input id="name" type="text" name="name" value="<%= @manufacturer.name %>" />
+    <label for="Phone">Phone:</label>
+    <input id="phone" type="text" name="phone" value="<%= @manufacturer.phone %>" />
+    <label for="country">Country:</label>
+    <input id="country" type="text" name="country" value="<%= @manufacturer.country %>" />
+
+    <input type="submit" name="" value="Update Manufacturer">
+
+</form>
+
+</div>

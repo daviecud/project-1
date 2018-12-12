@@ -14,10 +14,13 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
+  margin-bottom: 80px;
   text-align: center;
   border-radius: 15px;
   border-color: #158CC0;
   border-style: outset;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #inventorytable {
@@ -59,7 +62,7 @@ nav {
 
 h1 {
   color: #158CC0;
-  margin: 0;
+  margin-top: 20px;
   font-variant: small-caps;
   font-size: 80px;
   text-align: center;
@@ -70,7 +73,7 @@ h1 {
 h2 {color: #158CC0; text-align: center;}
 
 h3 {
-  color: green;
+  color: #158CC0;
 }
 
 .topnav {
@@ -115,6 +118,7 @@ h3 {
 .button {
   display: inline-block;
   text-decoration: none;
+
   color: red;
   margin: 10px;
   background: #ccc;
@@ -128,13 +132,14 @@ h3 {
 
 input[type=submit] {
   margin: 10px;
-  background: #ccc;
+  background: red;
   border: 0 none;
   cursor: pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  width: 70px;
-  height: 20px;
+  width: 120px;
+  height: 40px;
+  color: #ffffff;
 }
 
 .row {
@@ -143,16 +148,16 @@ input[type=submit] {
 }
 
 label {
-  color: gold;
+  color: #158CC0;
 }
 
 a.name {
-  color: green;
+  color: #158CC0;
   text-decoration: none;
 }
 
 a.name:visited {
-  color: silver;
+  color: red;
 }
 
 select {
@@ -167,13 +172,13 @@ select {
 }
 
 input[type=text], input[type=number] {
-  background-color: pink;
-  color: black;
+  background-color: #158CC0;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   height: 15px;
-  border-bottom: 2px solid blue;
-  width: 40%;
+  border-bottom: 2px solid #158CC0;
+  width: 60%;
   margin: 10px;
   text-align: center;
 }
