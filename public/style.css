@@ -34,12 +34,17 @@ nav {
   border-style: outset;
 }
 
-.container (
+.container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  )
+}
 
+
+#header{
+  display: block;
+  margin: auto;
+}
 
 h1 {
   color: #158CC0;

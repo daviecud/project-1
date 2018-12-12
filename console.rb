@@ -29,12 +29,12 @@ product1 = Product.new({
     })
 
     product3 = Product.new({
-      "name" => "The North Face Snow Quest Jacket",
+      "name" => "The North Face Kids Snowboard",
       "description" => "For all situations on the slopes.",
       "quantity" => "10",
       "cost" => "200",
       "sell_price" => "320",
-      "size" => "42",
+      "size" => "80",
       "sport_type" => "Winter Sports",
       "manufacturer" => "The North Face"
       })
@@ -50,10 +50,22 @@ product1 = Product.new({
       "manufacturer" => "DC"
       })
 
+    product5 = Product.new({
+      "name" => "GNU Ladies Pink Snowboard",
+      "description" => "Be Seen on the Slopes",
+      "quantity" => "0",
+      "cost" => "260",
+      "sell_price" => "430",
+      "size" => "120",
+      "sport_type" => "Snowboarding",
+      "manufacturer" => "GNU"
+      })
+
       product1.save()
       product2.save()
       product3.save()
       product4.save()
+      product5.save()
 
       manufacturer1 = Manufacturer.new({
         "name" => "Burton",
@@ -73,9 +85,16 @@ product1 = Product.new({
         "country" => "France"
         })
 
+      manufacturer4 = Manufacturer.new({
+        "name" => "GNU",
+        "phone" => "01602 666 9823",
+        "country" => "USA"
+        })
+
       manufacturer1.save()
       manufacturer2.save()
       manufacturer3.save()
+      manufacturer4.save()
 
 
       binding.pry
