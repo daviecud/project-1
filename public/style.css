@@ -40,25 +40,6 @@ nav {
   flex-direction: column;
   )
 
-#home-container {
-  background-image: url(/images/burton-deja-vu-snowboard.jpg);
-  background-size: cover;
-}
-
-#create-container {
-  background-image: url(/images/north-face-snow-quest-jacket-orange.jpg);
-  background-size: cover;
-}
-
-#edit-container {
-  background-image: url(/images/rossignol skis.jpg);
-  background-size: cover;
-}
-
-#show-container {
-  background-image: url(/images/salomon skis.jpg);
-  background-size: cover;
-}
 
 h1 {
   color: #158CC0;

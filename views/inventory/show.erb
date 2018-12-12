@@ -4,12 +4,13 @@
 
 <p>Name: <%= @products.name %></p>
 <p>Description: <%= @products.description %></p>
-<p>Quantity: <%= @products.quantity %></p>
-<p>Cost: <%= @products.cost %></p>
-<p>Sell Price: <%= @products.sell_price %></p>
-<p>Size: <%= @products.size %></p>
+<p>Quantity(£): <%= @products.quantity %></p>
+<p>Cost(£): <%= @products.cost %></p>
+<p>Sell Price(£): <%= @products.sell_price %></p>
+<p>Mark-up(£): <%= @products.mark_up() %></p>
+<p>Size(cm): <%= @products.size %></p>
 <p>Sport Type: <%= @products.sport_type %></p>
-<p>Mark-up: <%= @products.mark_up() %></p>
+
 <p style="color: red;" >Stock level Warning: <%= @products.stock_level() %></p>
 
 </div>
