@@ -1,6 +1,5 @@
-<div id="header">
 <h1>Products Inventory</h1>
-</div>
+
 
 
 <div id="inventorytable">
@@ -47,7 +46,7 @@
       <td>|</td>
       <td><%= product.stock_level %></td>
       <td>|</td>
-      <td><a href="/inventory/<%= product.id %>">Show Product</a></td>
+      <td><a href="/inventory/<%= product.id %>/edit">Update Product</a></td>
     </tr>
 
     <% end %>
@@ -68,6 +67,7 @@
   <p>Sport Type: <%= product.sport_type %></p>
   <p style="color: red;" >Stock Warning: <%= product.stock_level() %></p>
   <p> <a href="/inventory/<%= product.id %>">Show Product</a> </p>
+  <p><a href="/inventory/<%= product.id %>/edit">Update Product</a></p>
 <hr />
 <% end %>
 

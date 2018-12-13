@@ -16,8 +16,8 @@ get '/manufacturers' do
   erb(:"manufacturers/index")
 end
 
-get 'manufacturers/new' do
-  erb(:manufacturers/new)
+get '/manufacturers/new' do
+  erb(:"manufacturers/new")
 end
 
 post '/manufacturers' do

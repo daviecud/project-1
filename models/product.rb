@@ -102,7 +102,7 @@ class Product
 
   def stock_level()
     level = @quantity
-    if level <= 1
+    if level == 1
       return "Low Stock"
     elsif level == 0
       return "Out of Stock"

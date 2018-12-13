@@ -12,5 +12,6 @@
 <p>Sport Type: <%= @products.sport_type %></p>
 
 <p style="color: red;" >Stock level Warning: <%= @products.stock_level() %></p>
+<p><a href="/inventory/<%= @products.id %>/edit">Update Product</a></p>
 
 </div>

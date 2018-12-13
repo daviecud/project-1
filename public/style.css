@@ -42,7 +42,7 @@ nav {
 
 
 #header{
-  display: block;
+  display: inline-block;
   margin: auto;
   margin-bottom: 25px;
 }
@@ -85,9 +85,63 @@ h3 {
 }
 
 .topnav a:hover {
-  background-color: red;
-  color: yellow;
+  background-color: white;
+  color: #158CC0;
+  border-radius: 10px;
 }
+
+#img-div {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 400px;
+  width: 100%;
+  background: url(/images/dc_snow.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+#dc_sports {
+  position: relative;
+  top: 32%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 100px;
+  opacity: 0.7;
+  letter-spacing: 15px;
+  text-shadow: 5px 10px #000000;
+
+}
+
+#dc_sports_p {
+  position: relative;
+  top: 9%;
+  transform: translateY(-80%);
+  color: #ffffff;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 25px;
+  opacity: 0.7;
+  letter-spacing: 10px;
+  text-shadow: 5px 5px #000000;
+
+}
+
+.pagefooter {
+  width: 100%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  background-color: #158CC0;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 15px;
+}
+
+
 
 .product {
 
@@ -175,57 +229,4 @@ form {
   margin: 0 auto;
   width: 80%;
   align-items: center;
-}
-
-#img-div {
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  height: 400px;
-  width: 100%;
-  background: url(/images/dc_snow.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom bottom;
-  background-attachment: fixed;
-  background-size: cover;
-  border-radius: 5px;
-}
-
-#dc_sports {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ffffff;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 100px;
-  opacity: 0.7;
-  letter-spacing: 15px;
-  text-shadow: 5px 10px #000000;
-
-}
-
-#dc_sports_p {
-  position: relative;
-  top: 30%;
-  transform: translateY(-80%);
-  color: #ffffff;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 25px;
-  opacity: 0.7;
-  letter-spacing: 10px;
-  text-shadow: 5px 5px #000000;
-
-}
-
-.pagefooter {
-  width: 100%;
-  height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
-  background-color: #158CC0;
-  text-align: center;
-  color: #ffffff;
-  padding-top: 15px;
 }

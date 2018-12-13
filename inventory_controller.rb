@@ -36,7 +36,7 @@ post '/inventory' do
   erb(:"inventory/create")
 end
 
-get '/inventory/:id/:edit' do
+get '/inventory/:id/edit' do
   @products = Product.find(params[:id])
   erb(:"inventory/edit")
 end

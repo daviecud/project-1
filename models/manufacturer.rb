@@ -56,7 +56,7 @@ def self.delete_all()
 end
 
 def self.find(id)
-  sql = "SELECT FROM manufacturers WHERE id = $1"
+  sql = "SELECT * FROM manufacturers WHERE id = $1"
   values = [id]
   manufacturer = SqlRunner.run(sql, values)[0]
   return Manufacturer.new(manufacturer)
