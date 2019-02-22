@@ -1,11 +1,11 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 
 require_relative('./inventory_controller.rb')
 
 require_relative('./models/manufacturer.rb')
 require_relative('./models/product.rb')
-also_reload('./models/*')
+
 
 get '/' do
   erb(:home)

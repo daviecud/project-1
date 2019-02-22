@@ -8,9 +8,19 @@
   <p>Phone: <%= manufacturer.phone %></p>
   <p>Country: <%= manufacturer.country %></p>
   <p> <a href="/manufacturers/<%= manufacturer.id %>">Show Manufacturer</a> </p>
-<hr />
 
 
+<div class="manu_button">
+  <div id="wrapper">
+    <a class="button" href="/manufacturers/<%= manufacturer.id %>/edit"></a>
+
+    <form class="" action="/manufacturers/<%= manufacturer.id %>/delete" method="post">
+      <input type="submit" value="Delete Manufacturer">
+    </form>
+
+    <hr />
+  </div>
+</div>
 
 
 <% end %>
